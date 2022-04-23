@@ -11,4 +11,8 @@ public interface FuncionarioService {
     public Funcionario obterPorCodigo(String codigo);
 
     public Funcionario criar(Funcionario funcionario);
+
+    public List<Funcionario> obterFuncionariosPorRangeIdade(Integer de, Integer ate);
+
+    public List<Funcionario> obterFuncionariosPorNome(String nome);
 }

@@ -35,4 +35,15 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 
         return this.funcionaRepository.save(funcionario);
     }
+
+    @Override
+    public List<Funcionario> obterFuncionariosPorRangeIdade(Integer de, Integer ate) {
+
+        return this.funcionaRepository.obterFuncionariosPorRangeIdade(de, ate);
+    }
+
+    @Override
+    public List<Funcionario> obterFuncionariosPorNome(String nome) {
+        return this.funcionaRepository.findByNome(nome);
+    }
 }

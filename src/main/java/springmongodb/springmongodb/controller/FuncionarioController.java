@@ -28,4 +28,19 @@ public class FuncionarioController {
     public Funcionario criar(@RequestBody Funcionario funcionario) {
         return this.funcionarioService.criar(funcionario);
     }
+
+    @GetMapping("/range")
+    public List<Funcionario> obterFuncionariosPorRangeIdade(
+            @RequestParam("de") Integer de,
+            @RequestParam("ate") Integer ate
+    ) {
+        return  this.funcionarioService.obterFuncionariosPorRangeIdade(de, ate);
+    }
+
+    @GetMapping("/por-nome")
+    public List<Funcionario> obterFuncionariosPorNome(
+            @RequestParam("nome") String nome
+    ) {
+        return this.funcionarioService.obterFuncionariosPorNome(nome);
+    }
 }
