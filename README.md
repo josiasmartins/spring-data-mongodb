@@ -2,7 +2,7 @@
 
 ### demo
 ##### with get
-![Demo](./src/resources/static/spring-data-mongodb-get.gif)
+![Demo](./src/main/resources/static/spring-data-mongodb-get.gif)
 
 ##### with post
-![Demo](./src/resources/)
+![Demo](./src/main/resources/static/spring-data-mongodb-post.gif)
