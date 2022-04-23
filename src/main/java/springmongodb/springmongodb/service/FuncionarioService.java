@@ -1,5 +1,7 @@
 package springmongodb.springmongodb.service;
 
+import springmongodb.springmongodb.model.Funcionario;
+
 import java.util.List;
 
 public interface FuncionarioService {

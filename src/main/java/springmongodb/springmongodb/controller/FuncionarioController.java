@@ -1,23 +1,31 @@
 package springmongodb.springmongodb.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springmongodb.springmongodb.model.Funcionario;
+import springmongodb.springmongodb.service.FuncionarioService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/funcionarios")
 public class FuncionarioController {
 
-    @GetMapping
-    public void obterDados() {
+    @Autowired
+    private FuncionarioService funcionarioService;
 
+    @GetMapping
+    public List<Funcionario> obterTodos() {
+        return this.funcionarioService.obterTodos();
     }
 
     @GetMapping("/{codigo}")
-    public void obterPorCodigo(@PathVariable Long codigo) {
-
+    public Funcionario obterPorCodigo(@PathVariable String codigo) {
+        return this.funcionarioService.obterPorCodigo(codigo);
     }
 
     @PostMapping
-    public void criar(@RequestBody Object funcionario) {
-
+    public Funcionario criar(@RequestBody Funcionario funcionario) {
+        return this.funcionarioService.criar(funcionario);
     }
 }
